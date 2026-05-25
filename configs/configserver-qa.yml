@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: configserver
+  profiles:
+    active: git
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/krishna9787/springBoot-eventdriven-microservices-product-app-config-repo
+          skipSslValidation: true
+          timeout: 4
+          default-label: main
+          force-pull: true
+          clone-on-start: true
+          refreshRate: 100
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+server:
+  port: 8071
+
+encrypt:
+  key: ad4468179c9234554b304874a57cf4a345d9c18e9997c53f6e7884647b1dfc8f
