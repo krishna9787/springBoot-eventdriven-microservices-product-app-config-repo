@@ -1,19 +1,28 @@
 spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
   application:
     name: configserver
   profiles:
     active: git
   cloud:
+    bus:
+      enabled: true
+      refresh:
+        enabled: true
     config:
       server:
         git:
-          uri: https://github.com/krishna9787/springBoot-eventdriven-microservices-product-app-config-repo
-          skipSslValidation: true
+          uri: https://github.com/krishna9787/springBoot-eventdriven-microservices-product-app-config-repo.git
           timeout: 4
           default-label: main
           force-pull: true
           clone-on-start: true
           refreshRate: 100
+
 management:
   endpoints:
     web:
