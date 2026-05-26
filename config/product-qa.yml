@@ -1,7 +1,7 @@
 contact-info:
   name: Krishnadas Mohanan
   email: abc@xyz.com
-  test: 3
+  test: 4
 
 server:
   port: 8080
