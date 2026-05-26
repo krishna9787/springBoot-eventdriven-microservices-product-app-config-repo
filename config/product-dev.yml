@@ -6,13 +6,15 @@ spring:
     driverClassName: org.h2.Driver
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update #creates tables on start
   h2:
     console:
       enabled: true
       path: /h2-console
       settings:
         trace: false
-        web-allow-others: false
+        web-allow-others: false #prevents remove access
 
 server:
   port: 8080
