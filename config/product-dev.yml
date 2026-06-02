@@ -8,6 +8,9 @@ spring:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
       ddl-auto: update #creates tables on start
+    properties:
+      hibernate:
+        format-sql: true
   h2:
     console:
       enabled: true
